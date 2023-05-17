@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insecurity</title>
+</head>
+<body>
+<div id="notepad-content">
+
+</div>
+
+
+<script>
+  fetch('insecurity.txt')
+    .then(response => response.text())
+    .then(data => {
+      const element = document.getElementById('notepad-content');
+      element.innerText = data;
+    })
+    .catch(error => {
+      console.log('Error:', error);
+    });
+</script>
+</body>
+</html>
